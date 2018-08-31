@@ -9,8 +9,8 @@ from sshuttle.options import parser, parse_ipport
 from sshuttle.helpers import family_ip_tuple, log, Fatal
 
 
-def main():
-    opt = parser.parse_args()
+def main(options):
+    opt = parser.parse_args(options)
 
     if opt.daemon:
         opt.syslog = 1
